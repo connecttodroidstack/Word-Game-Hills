@@ -1,0 +1,118 @@
+/* Word Game Hills - shared styles for the GitHub Pages site (mountain theme). */
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap");
+
+:root {
+  --ink: #2b2140;
+  --ink-soft: #5d5470;
+  --cream: #fff8ec;
+  --cream-border: #f0d9b5;
+  --gold: #ffcb3d;
+  --orange: #ffa62b;
+  --green: #4fae36;
+  --green-dark: #3b8e1f;
+  --blue: #2f7fd6;
+  --sky: #6ebef0;
+  --wood: #8a4b23;
+  --bg: #eaf4fb;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Fredoka", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+a { color: var(--blue); font-weight: 600; }
+
+/* Hero header with the valley artwork */
+.hero {
+  position: relative;
+  background: linear-gradient(180deg, rgba(10, 40, 80, .25), rgba(10, 30, 50, .65)), url("hero.webp") center / cover;
+  color: #fff;
+  text-align: center;
+  padding: 56px 16px 72px;
+}
+.hero.small { padding: 36px 16px 48px; }
+.hero img.icon {
+  width: 132px; height: 132px; border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+  border: 4px solid rgba(255, 255, 255, .85);
+}
+.hero.small img.icon { width: 84px; height: 84px; border-radius: 20px; }
+.hero h1 {
+  margin: 14px 0 4px;
+  font-size: clamp(34px, 7vw, 56px);
+  font-weight: 700;
+  color: var(--gold);
+  -webkit-text-stroke: 2px #3a2414;
+  text-shadow: 0 4px 0 #3a2414, 0 8px 18px rgba(0, 0, 0, .4);
+  letter-spacing: 1px;
+}
+.hero.small h1 { font-size: clamp(28px, 6vw, 40px); }
+.hero p.tagline { margin: 0; font-size: 20px; font-weight: 500; text-shadow: 0 2px 8px rgba(0, 0, 0, .5); }
+
+nav.top {
+  display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;
+  margin-top: 22px;
+}
+nav.top a {
+  color: #fff; text-decoration: none;
+  background: rgba(20, 30, 50, .55);
+  border: 1.5px solid rgba(255, 255, 255, .35);
+  padding: 7px 16px; border-radius: 999px; font-weight: 600;
+}
+nav.top a:hover { background: rgba(20, 30, 50, .8); }
+
+main { max-width: 860px; margin: -40px auto 40px; padding: 0 16px; position: relative; }
+
+.card {
+  background: var(--cream);
+  border: 2px solid var(--cream-border);
+  border-radius: 22px;
+  padding: 26px 28px;
+  box-shadow: 0 12px 30px rgba(30, 50, 80, .15);
+  margin-bottom: 20px;
+}
+.card h2 {
+  margin-top: 0; font-size: 26px; color: var(--wood);
+  display: flex; align-items: center; gap: 10px;
+}
+.card h3 { margin: 22px 0 6px; font-size: 20px; color: var(--ink); }
+.card p, .card li { color: var(--ink-soft); }
+.meta { color: var(--ink-soft); font-size: 15px; margin-top: -6px; }
+
+.badge {
+  display: inline-block; font-size: 13px; font-weight: 700; color: #fff;
+  padding: 3px 12px; border-radius: 999px; background: var(--green);
+}
+
+.features {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px;
+}
+.feature {
+  background: #fff; border: 2px solid var(--cream-border); border-radius: 18px; padding: 16px;
+}
+.feature .emoji { font-size: 28px; }
+.feature b { display: block; font-size: 18px; color: var(--ink); margin: 4px 0 2px; }
+.feature span { color: var(--ink-soft); font-size: 15px; }
+
+.button {
+  display: inline-block; text-decoration: none; color: #fff; font-weight: 700; font-size: 18px;
+  background: linear-gradient(180deg, #74d44b, var(--green));
+  border-bottom: 5px solid var(--green-dark);
+  padding: 12px 28px; border-radius: 999px; margin: 6px;
+}
+.button.blue { background: linear-gradient(180deg, #66b8f7, var(--blue)); border-bottom-color: #1f5ea6; }
+
+.contact {
+  text-align: center; background: linear-gradient(180deg, #fff3cf, #ffe39a);
+  border-color: #e7c35f;
+}
+.contact a { font-size: 19px; }
+
+footer { text-align: center; color: var(--ink-soft); font-size: 14px; padding: 10px 16px 34px; }
